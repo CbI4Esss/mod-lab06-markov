@@ -30,8 +30,7 @@ void TextGenerator::read() {
 
     if (myfile.is_open()) {
         myfile >> words;
-    }
-    else {
+    } else {
         std::cout << "Error! File can't be opened" << std::endl;
     }
 }
@@ -43,8 +42,7 @@ void TextGenerator::get_words() {
     if (!in.fail()) {
         while (!in.eof()) text += in.get();
         in.close();
-    }
-    else {
+    } else {
         std::cout << "File not found." << std::endl;
     }
 
