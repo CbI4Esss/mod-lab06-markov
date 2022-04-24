@@ -15,7 +15,7 @@ const int NPREF = 2;
 const int MAXGEN = 1000;
 
 class TextGenerator {
-public:
+ public:
     std::string pair[2];
     std::string my_file;
     std::string words;
