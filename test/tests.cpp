@@ -1,8 +1,8 @@
 // Copyright 2021 GHA Test Team
 #include <gtest/gtest.h>
-#include "../include/textgen.h"
-#include <sstream>
 #include <string>
+#include <sstream>
+#include "../include/textgen.h"
 
 TEST(task1, test1) {
     TextGenerator tg = TextGenerator("test1.txt");
@@ -26,7 +26,8 @@ TEST(task2, test1) {
 
 TEST(task3, test1) {
     TextGenerator tg = TextGenerator("test3.txt");
-    std::string text = "The report led to a huge backlash on social media and support for the Labour deputy leader.";
+    std::string text = "The report led to a huge backlash on social media";
+    text+=" and support for the Labour deputy leader.";
     tg.vector_words.push_back(tg.get_list(text));
     for (int i = 0; i < tg.vector_words.size(); i++) {
         tg.prefixes.push_back(tg.vector_words[i]);
