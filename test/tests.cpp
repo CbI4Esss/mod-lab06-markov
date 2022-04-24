@@ -47,8 +47,8 @@ TEST(task4, test1) {
     std::string text = "Hello, my dear! Hello, my lovely! Hello ";
     text += "my beautiful!";
     tg.vector_words.push_back(tg.get_list(text));
-    for (int i = 0; i < tg.slova.size(); i++) {
-        tg.prefixes.push_back(tg.slova[i]);
+    for (int i = 0; i < tg.vector_words.size(); i++) {
+        tg.prefixes.push_back(tg.vector_words[i]);
     }
     tg.make_dictionary();
     tg.get_connected();
@@ -64,7 +64,7 @@ TEST(task5, test1) {
     std::string text = "The Mail on Sunday is not commenting.";
     tg.vector_words.push_back(tg.get_list(text));
     for (int i = 0; i < tg.vector_words.size(); i++) {
-        tg.prefixes.push_back(tg.slova[i]);
+        tg.prefixes.push_back(tg.vector_words[i]);
     }
     typedef std::deque<std::string> prefix;
     prefix values;
